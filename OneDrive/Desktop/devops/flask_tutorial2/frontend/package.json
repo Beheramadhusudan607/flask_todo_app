@@ -10,17 +10,13 @@
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1"
-  }
-}
-{
-  "author": "MADHUSUDAN ",
+  },
+  "author": "MADHUSUDAN",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/beheramadhusudan607/frontend.git"
-  }
-}
-{
+  },
   "engines": {
     "node": ">=12.0.0"
   },
@@ -29,27 +25,8 @@
     "nodejs",
     "express",
     "axios"
-  ]
-}
-
-
+  ],
   "bugs": {
     "url": "https://github.com/beheramadhusudan607/frontend/issues"
   }
-{
-  "message": "Updated content for /api route",
-  "status": "success"
-}// ...existing code...
-
-// Add a new To-Do item via /submittodoitem route
-app.post('/submittodoitem', (req, res) => {
-    const { name, description } = req.body;
-    if (!name || !description) {
-        return res.status(400).json({ error: 'Name and description are required.' });
-    }
-    const newTodo = { name, description };
-    todos.push(newTodo);
-    res.status(201).json({ message: 'To-Do item submitted successfully!', todo: newTodo });
-});
-
-// ...existing code...
+}
