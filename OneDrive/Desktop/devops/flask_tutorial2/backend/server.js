@@ -1,33 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-<<<<<<< HEAD
-=======
 const mongoose = require('mongoose');
->>>>>>> master_2
 
 const app = express();
 const PORT = 3000;
 
 app.use(bodyParser.json());
 
-<<<<<<< HEAD
-let todos = [];
-
-// Get all To-Do items
-app.get('/api/todos', (req, res) => {
-    res.json(todos);
-});
-
-// Add a new To-Do item
-app.post('/api/todos', (req, res) => {
-    const { name, description } = req.body;
-    if (!name || !description) {
-        return res.status(400).json({ error: 'Name and description are required.' });
-    }
-    const newTodo = { name, description };
-    todos.push(newTodo);
-    res.status(201).json(newTodo);
-=======
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/todoapp', {
     useNewUrlParser: true,
@@ -54,7 +33,6 @@ app.post('/submittodoitem', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: 'Failed to save to database.' });
     }
->>>>>>> master_2
 });
 
 app.listen(PORT, () => {
